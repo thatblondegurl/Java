@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="myFunction()">Click me</button>
+
+<p id="demo"></p>
+
+<script>
+
+function myFunction() {
+var num1 = parseInt(prompt("Enter a number between 1 and 20.")); //parse the num to number
+var num2 = parseInt(prompt("Enter a number between 1 and 20.")); //prompt user to enter the number
+
+var i = 0;
+var data="<table border='1' cellspacing='0'><tr><th>number</th><th>square</th><th>cube</th></tr>";
+for(i=num1;i<=num2;i++) {
+data+="<tr><td>" + i + " </td><td> " + (i*i) + "</td><td> " + (i*i*i) + "</td></tr>";
+}
+data+=+"</table>";
+document.getElementById("demo").innerHTML = data;
+}
+</script>
+
+</body>
+</html>
